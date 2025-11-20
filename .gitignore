@@ -14,10 +14,5 @@ env/
 .idea/
 .vscode/
 
-# Datos locales
-data/
-reports/
-models/
-
 # Otros
 *.log

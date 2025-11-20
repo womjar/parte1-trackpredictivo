@@ -1,0 +1,19 @@
+===== Métricas modelo p_fail =====
+
+Reporte de clasificación (clase 1 = corrida fallida):
+              precision    recall  f1-score   support
+
+           0     0.8838    0.8984    0.8910       728
+           1     0.9505    0.9429    0.9467      1506
+
+    accuracy                         0.9284      2234
+   macro avg     0.9171    0.9206    0.9188      2234
+weighted avg     0.9287    0.9284    0.9285      2234
+
+ROC-AUC: 0.9679
+Matriz de confusión [ [TN FP] [FN TP] ]:
+[[ 654   74]
+ [  86 1420]]
+
+Distribución de la variable objetivo (y_test):
+{np.int64(0): np.int64(728), np.int64(1): np.int64(1506)}

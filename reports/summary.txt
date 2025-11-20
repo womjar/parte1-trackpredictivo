@@ -1,0 +1,72 @@
+========== RESUMEN BÁSICO DEL DATASET ==========
+
+Filas: 11168
+Columnas: 21
+Columnas: ['timestamp', 'day_of_week', 'release_cycle', 'iteration', 'squad', 'platform', 'environment', 'device_id', 'test_suite', 'scenarios_total', 'scenarios_passed', 'scenarios_failed', 'status', 'retries', 'duration_sec', 'memory_mb', 'files_touched', 'diff_size', 'usage_cpu', 'tags', 'fail_rate']
+
+Rango de fechas:
+  min: 2024-01-14 19:40:02.965641
+  max: 2025-07-24 21:03:02.965641
+
+=== SQUAD ===
+Valores únicos: 8
+Top 5 más frecuentes:
+squad
+checkout         1408
+smart-testing    1404
+payments         1399
+logistics        1398
+search           1396
+Name: count, dtype: int64
+
+=== PLATFORM ===
+Valores únicos: 3
+Top 5 más frecuentes:
+platform
+web        3728
+ios        3726
+android    3714
+Name: count, dtype: int64
+
+=== ENVIRONMENT ===
+Valores únicos: 2
+Top 5 más frecuentes:
+environment
+release_app    5589
+test_app       5579
+Name: count, dtype: int64
+
+=== DEVICE_ID ===
+Valores únicos: 19
+Top 5 más frecuentes:
+device_id
+browser_firefox         1914
+browser_chrome          1814
+iPhone_14_17             475
+iPhone_14_Pro_18         460
+Google_Pixel_4_XL_10     452
+Name: count, dtype: int64
+
+=== Estadísticas de fail_rate ===
+count    11168.000000
+mean         0.051409
+std          0.050461
+min          0.000000
+25%          0.000000
+50%          0.047619
+75%          0.081633
+max          0.312500
+Name: fail_rate, dtype: float64
+
+
+========== GRUPOS MÁS FLAKY (TOP 10) ==========
+
+--- flaky_squad_device ---
+Empty DataFrame
+Columns: [fail_rate_mean, fail_rate_std, runs]
+Index: []
+
+--- flaky_full_combo ---
+Empty DataFrame
+Columns: [fail_rate_mean, fail_rate_std, runs]
+Index: []
