@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# IDEs / editores
+.idea/
+.vscode/
+
+# Datos locales
+data/
+reports/
+models/
+
+# Otros
+*.log

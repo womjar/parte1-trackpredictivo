@@ -1,0 +1,35 @@
+services:
+  flakiness-eda:
+    build: .
+    container_name: flakiness-eda
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    command: >
+      python src/eda_flakiness.py
+      --input data/e2e_runs_meli_fake.csv
+      --output-dir reports
+
+  flakiness-train:
+    build: .
+    container_name: flakiness-train
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    command: >
+      python src/train_flakiness_model.py
+      --input data/e2e_runs_meli_fake.csv
+      --output-model models/flakiness_model.joblib
+      --metrics-output models/flakiness_model_metrics.txt
+
+  flakiness-api:
+    build: .
+    container_name: flakiness-api
+    volumes:
+      - ./models:/app/models
+    ports:
+      - "8000:8000"
+    command: >
+      uvicorn src.flakiness_api:app
+      --host 0.0.0.0
+      --port 8000
